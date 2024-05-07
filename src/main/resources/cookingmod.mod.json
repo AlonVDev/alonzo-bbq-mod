@@ -8,8 +8,8 @@
 		"AlonzoVR"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/alonzo-cooking-mod/",
+		"sources": "https://github.com/AlonzoVR/alonzo-cookingmod/"
 	},
 	"license": "MIT",
 	"icon": "assets/cookingmod/icon.png",
