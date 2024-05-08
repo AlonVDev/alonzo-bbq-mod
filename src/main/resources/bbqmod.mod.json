@@ -1,15 +1,15 @@
 {
 	"schemaVersion": 1,
-	"id": "cookingmod",
+	"id": "bbqmod",
 	"version": "${version}",
-	"name": "Alonzo's Cooking Mod",
-	"description": "This Mod adds A LOT of cooking stuff, like: Grills, Ovens and more!",
+	"name": "Alonzo's BBQ Mod",
+	"description": "This Mod adds A LOT of cooking and barbeque stuff",
 	"authors": [
 		"AlonzoVR"
 	],
 	"contact": {
-		"homepage": "https://modrinth.com/mod/alonzo-cooking-mod/",
-		"sources": "https://github.com/AlonzoVR/alonzo-cookingmod/"
+		"homepage": "https://modrinth.com/mod/alonzo-bbq-mod/",
+		"sources": "https://github.com/AlonzoVR/alonzo-bbq-mod/"
 	},
 	"license": "MIT",
 	"icon": "assets/cookingmod/icon.png",

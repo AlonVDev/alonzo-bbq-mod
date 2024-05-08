@@ -1,8 +1,8 @@
-package com.alonzovr.cookingmod;
+package com.alonzovr.bbqmod;
 
 import net.fabricmc.api.ClientModInitializer;
 
-public class CookingModClient implements ClientModInitializer {
+public class BBQModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 

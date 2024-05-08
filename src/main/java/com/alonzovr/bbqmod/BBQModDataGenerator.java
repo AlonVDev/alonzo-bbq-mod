@@ -1,9 +1,9 @@
-package com.alonzovr.cookingmod;
+package com.alonzovr.bbqmod;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
-public class CookingModDataGenerator implements DataGeneratorEntrypoint {
+public class BBQModDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 
