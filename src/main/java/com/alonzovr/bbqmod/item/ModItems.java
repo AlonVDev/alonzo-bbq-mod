@@ -18,8 +18,6 @@ public class ModItems {
     }
 
     public static void registerModItems() {
-        BBQMod.LOGGER.info("Registering Mod Items for " + BBQMod.MOD_ID);
-
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(PLACEHOLDER);
         });
