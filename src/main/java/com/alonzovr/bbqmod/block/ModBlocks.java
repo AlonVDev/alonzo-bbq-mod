@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CampfireBlock;
+import net.minecraft.block.ScaffoldingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -15,7 +16,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-    public static final Block GRILL = registerBlock("grill", new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block GRILL = registerBlock("grill", new GrillBlock(false, 1, FabricBlockSettings.copyOf(Blocks.CAMPFIRE)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -28,7 +29,7 @@ public class ModBlocks {
     }
 
     public static void registerModBlocks() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
             entries.add(GRILL);
         });
     }
