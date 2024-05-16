@@ -13,10 +13,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-    public static final Block GRILL = registerBlock("grill", new GrillBlock(false, 1, FabricBlockSettings.copyOf(Blocks.CAMPFIRE)));
+    public static final Block GRILL = registerBlock("grill", new GrillBlock(false, 1, FabricBlockSettings.copyOf(Blocks.CAULDRON)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
