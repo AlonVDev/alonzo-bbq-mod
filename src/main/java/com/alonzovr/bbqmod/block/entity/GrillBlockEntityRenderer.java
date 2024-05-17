@@ -1,8 +1,8 @@
 package com.alonzovr.bbqmod.block.entity;
 
+import com.alonzovr.bbqmod.block.GrillBlock;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.block.CampfireBlock;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
@@ -26,7 +26,7 @@ public class GrillBlockEntityRenderer
 
     @Override
     public void render(GrillBlockEntity grillBlockEntity, float f, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, int j) {
-        Direction direction = grillBlockEntity.getCachedState().get(CampfireBlock.FACING);
+        Direction direction = grillBlockEntity.getCachedState().get(GrillBlock.FACING);
         DefaultedList<ItemStack> defaultedList = grillBlockEntity.getItemsBeingCooked();
         int k = (int)grillBlockEntity.getPos().asLong();
         for (int l = 0; l < defaultedList.size(); ++l) {
