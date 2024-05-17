@@ -17,7 +17,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-    public static final Block GRILL = registerBlock("grill", new GrillBlock(false, 1, FabricBlockSettings.copyOf(Blocks.CAULDRON)));
+    public static final Block GRILL = registerBlock("grill", new GrillBlock(true, 1, FabricBlockSettings.copyOf(Blocks.CAULDRON)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

@@ -1,6 +1,8 @@
 package com.alonzovr.bbqmod.block;
 
 import java.util.Optional;
+
+import com.alonzovr.bbqmod.block.entity.ModBlockEntities;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
@@ -12,7 +14,7 @@ import net.minecraft.block.Waterloggable;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.block.entity.CampfireBlockEntity;
+import com.alonzovr.bbqmod.block.entity.GrillBlockEntity;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -72,17 +74,17 @@ public class GrillBlock
         super(settings);
         this.emitsParticles = emitsParticles;
         this.fireDamage = fireDamage;
-        this.setDefaultState((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(LIT, true)).with(SIGNAL_FIRE, false)).with(WATERLOGGED, false)).with(FACING, Direction.NORTH));
+        this.setDefaultState((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(LIT, false)).with(SIGNAL_FIRE, false)).with(WATERLOGGED, false)).with(FACING, Direction.NORTH));
     }
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack itemStack;
-        CampfireBlockEntity campfireBlockEntity;
+        GrillBlockEntity grillBlockEntity;
         Optional<CampfireCookingRecipe> optional;
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof CampfireBlockEntity && (optional = (campfireBlockEntity = (CampfireBlockEntity)blockEntity).getRecipeFor(itemStack = player.getStackInHand(hand))).isPresent()) {
-            if (!world.isClient && campfireBlockEntity.addItem(player, player.getAbilities().creativeMode ? itemStack.copy() : itemStack, optional.get().getCookTime())) {
+        if (blockEntity instanceof GrillBlockEntity && (optional = (grillBlockEntity = (GrillBlockEntity)blockEntity).getRecipeFor(itemStack = player.getStackInHand(hand))).isPresent()) {
+            if (!world.isClient && grillBlockEntity.addItem(player, player.getAbilities().creativeMode ? itemStack.copy() : itemStack, optional.get().getCookTime())) {
                 player.incrementStat(Stats.INTERACT_WITH_CAMPFIRE);
                 return ActionResult.SUCCESS;
             }
@@ -105,8 +107,8 @@ public class GrillBlock
             return;
         }
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof CampfireBlockEntity) {
-            ItemScatterer.spawn(world, pos, ((CampfireBlockEntity)blockEntity).getItemsBeingCooked());
+        if (blockEntity instanceof GrillBlockEntity) {
+            ItemScatterer.spawn(world, pos, ((GrillBlockEntity)blockEntity).getItemsBeingCooked());
         }
         super.onStateReplaced(state, world, pos, newState, moved);
     }
@@ -117,7 +119,7 @@ public class GrillBlock
         BlockPos blockPos;
         World worldAccess = ctx.getWorld();
         boolean bl = worldAccess.getFluidState(blockPos = ctx.getBlockPos()).getFluid() == Fluids.WATER;
-        return (BlockState)((BlockState)((BlockState)((BlockState)this.getDefaultState().with(WATERLOGGED, bl)).with(SIGNAL_FIRE, this.isSignalFireBaseBlock(worldAccess.getBlockState(blockPos.down())))).with(LIT, !bl)).with(FACING, ctx.getHorizontalPlayerFacing());
+        return (BlockState)((BlockState)((BlockState)((BlockState)this.getDefaultState().with(WATERLOGGED, bl)).with(SIGNAL_FIRE, this.isSignalFireBaseBlock(worldAccess.getBlockState(blockPos.down())))).with(LIT, bl)).with(FACING, ctx.getHorizontalPlayerFacing());
     }
 
     @Override
@@ -167,8 +169,8 @@ public class GrillBlock
                 GrillBlock.spawnSmokeParticle((World)world, pos, state.get(SIGNAL_FIRE), true);
             }
         }
-        if ((blockEntity = world.getBlockEntity(pos)) instanceof CampfireBlockEntity) {
-            ((CampfireBlockEntity)blockEntity).spawnItemsBeingCooked();
+        if ((blockEntity = world.getBlockEntity(pos)) instanceof GrillBlockEntity) {
+            ((GrillBlockEntity)blockEntity).spawnItemsBeingCooked();
         }
         world.emitGameEvent(entity, GameEvent.BLOCK_CHANGE, pos);
     }
@@ -251,7 +253,7 @@ public class GrillBlock
 
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new CampfireBlockEntity(pos, state);
+        return new GrillBlockEntity(pos, state);
     }
 
     @Override
@@ -259,13 +261,13 @@ public class GrillBlock
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
         if (world.isClient) {
             if (state.get(LIT).booleanValue()) {
-                return GrillBlock.checkType(type, BlockEntityType.CAMPFIRE, CampfireBlockEntity::clientTick);
+                return GrillBlock.checkType(type, ModBlockEntities.GRILL_BLOCK_ENTITY_BLOCK_ENTITY_TYPE, GrillBlockEntity::clientTick);
             }
         } else {
             if (state.get(LIT).booleanValue()) {
-                return GrillBlock.checkType(type, BlockEntityType.CAMPFIRE, CampfireBlockEntity::litServerTick);
+                return GrillBlock.checkType(type, ModBlockEntities.GRILL_BLOCK_ENTITY_BLOCK_ENTITY_TYPE, GrillBlockEntity::litServerTick);
             }
-            return GrillBlock.checkType(type, BlockEntityType.CAMPFIRE, CampfireBlockEntity::unlitServerTick);
+            return GrillBlock.checkType(type, ModBlockEntities.GRILL_BLOCK_ENTITY_BLOCK_ENTITY_TYPE, GrillBlockEntity::unlitServerTick);
         }
         return null;
     }
