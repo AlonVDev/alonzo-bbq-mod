@@ -29,16 +29,26 @@ public class GrillBlockEntityRenderer
         Direction direction = grillBlockEntity.getCachedState().get(GrillBlock.FACING);
         DefaultedList<ItemStack> defaultedList = grillBlockEntity.getItemsBeingCooked();
         int k = (int)grillBlockEntity.getPos().asLong();
+
+        float[][] offsets = {
+                {-0.21f, -0.21f},
+                {0.21f, -0.21f},
+                {0.21f, 0.21f},
+                {-0.21f, 0.21f}
+        };
+
         for (int l = 0; l < defaultedList.size(); ++l) {
             ItemStack itemStack = defaultedList.get(l);
             if (itemStack == ItemStack.EMPTY) continue;
             matrixStack.push();
-            matrixStack.translate(0.5f, 0.44921875f, 0.5f);
-            Direction direction2 = Direction.fromHorizontal((l + direction.getHorizontal()) % 4);
-            float g = -direction2.asRotation();
+            matrixStack.translate(0.5f, 0.95f, 0.5f);
+            //0.44921875f
+            //Direction direction2 = Direction.fromHorizontal((l + direction.getHorizontal()) % 4);
+            float g = -direction.asRotation();
             matrixStack.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(g));
             matrixStack.multiply(RotationAxis.POSITIVE_X.rotationDegrees(90.0f));
-            matrixStack.translate(-0.3125f, -0.3125f, 0.0f);
+            matrixStack.translate(offsets[l][0], offsets[l][1], 0.0f);
+            //matrixStack.translate(-0.3125f, -0.3125f, 0.0f);
             matrixStack.scale(0.375f, 0.375f, 0.375f);
             this.itemRenderer.renderItem(itemStack, ModelTransformationMode.FIXED, i, j, matrixStack, vertexConsumerProvider, grillBlockEntity.getWorld(), k + l);
             matrixStack.pop();
