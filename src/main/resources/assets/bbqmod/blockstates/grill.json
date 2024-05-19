@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "lit=true": {
       "model": "bbqmod:block/grill"
+    },
+    "lit=false": {
+      "model": "bbqmod:block/grill_off"
     }
   }
 }

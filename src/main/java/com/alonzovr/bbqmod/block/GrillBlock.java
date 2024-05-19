@@ -57,7 +57,7 @@ import org.jetbrains.annotations.Nullable;
 public class GrillBlock
         extends BlockWithEntity
         implements Waterloggable {
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 12.0, 0.0, 16.0, 16.0, 16.0);
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 8.0, 0.0, 16.0, 16.0, 16.0);
     public static final BooleanProperty LIT = Properties.LIT;
     public static final BooleanProperty SIGNAL_FIRE = Properties.SIGNAL_FIRE;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
