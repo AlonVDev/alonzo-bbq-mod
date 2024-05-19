@@ -4,6 +4,7 @@ import net.minecraft.block.*;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,8 +14,14 @@ import static net.minecraft.block.CampfireBlock.*;
 @Mixin(CampfireBlock.class)
 public abstract class CampfireBlockMixin extends BlockWithEntity
         implements Waterloggable {
-    protected CampfireBlockMixin(Settings settings) {
+    private final boolean emitsParticles;
+    private final int fireDamage;
+
+    protected CampfireBlockMixin(boolean emitsParticles, int fireDamage, AbstractBlock.Settings settings) {
         super(settings);
+        this.emitsParticles = emitsParticles;
+        this.fireDamage = fireDamage;
+        this.setDefaultState((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(LIT, false)).with(SIGNAL_FIRE, false)).with(WATERLOGGED, false)).with(FACING, Direction.NORTH));
     }
 
     @Override

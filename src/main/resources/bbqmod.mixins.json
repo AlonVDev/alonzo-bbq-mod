@@ -4,7 +4,8 @@
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
 		"ExampleMixin",
-		"CampfireBlockMixin"
+		"CampfireBlockMixin",
+		"FlintAndSteelItemMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
