@@ -163,7 +163,7 @@ public class GrillBlockEntity extends BlockEntity implements Clearable {
         for(int i = 0; i < this.itemsBeingCooked.size(); ++i) {
             ItemStack itemStack = (ItemStack)this.itemsBeingCooked.get(i);
             if (itemStack.isEmpty()) {
-                this.cookingTotalTimes[i] = cookTime;
+                this.cookingTotalTimes[i] = (int) ((double) cookTime / 2.0);
                 this.cookingTimes[i] = 0;
                 this.itemsBeingCooked.set(i, stack.split(1));
                 this.world.emitGameEvent(GameEvent.BLOCK_CHANGE, this.getPos(), Emitter.of(user, this.getCachedState()));
