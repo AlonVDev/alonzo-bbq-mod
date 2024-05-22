@@ -10,7 +10,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item PLACEHOLDER = registerItem("placeholder", new Item(new FabricItemSettings()));
+    public static final Item OVERCOOKED_BEEF = registerItem("overcooked_beef", new Item(new FabricItemSettings().food(ModFoodComponents.OVERCOOKED_BEEF)));
 
 
     private static Item registerItem(String name, Item item) {
@@ -18,8 +18,8 @@ public class ModItems {
     }
 
     public static void registerModItems() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(PLACEHOLDER);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+            entries.add(OVERCOOKED_BEEF);
         });
     }
 }
