@@ -1,7 +1,6 @@
 {
-  "replace": false,
   "values": [
-    "bbqmod:grill",
+    "minecraft:coal_block",
     "bbqmod:charcoal_block"
   ]
 }
