@@ -1,6 +1,7 @@
-package com.alonzovr.bbqmod.block.entity;
+package com.alonzovr.bbqmod.block.entity.renderer;
 
 import com.alonzovr.bbqmod.block.GrillBlock;
+import com.alonzovr.bbqmod.block.entity.GrillBlockEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.VertexConsumerProvider;

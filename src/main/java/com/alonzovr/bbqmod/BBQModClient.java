@@ -1,7 +1,7 @@
 package com.alonzovr.bbqmod;
 
 import com.alonzovr.bbqmod.block.ModBlocks;
-import com.alonzovr.bbqmod.block.entity.GrillBlockEntityRenderer;
+import com.alonzovr.bbqmod.block.entity.renderer.GrillBlockEntityRenderer;
 import com.alonzovr.bbqmod.block.entity.ModBlockEntities;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
