@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
     public static final Block GRILL = registerBlock("grill", new GrillBlock(true, 1, FabricBlockSettings.copyOf(Blocks.CAULDRON)));
-    public static final Block SEASONING_TABLE = registerBlock("seasoning_table", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block SEASONING_TABLE = registerBlock("seasoning_table", new SeasoningTableBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

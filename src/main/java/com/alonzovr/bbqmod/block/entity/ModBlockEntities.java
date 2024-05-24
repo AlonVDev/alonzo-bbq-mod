@@ -12,6 +12,9 @@ public class ModBlockEntities {
     public static final BlockEntityType<GrillBlockEntity> GRILL_BLOCK_ENTITY_BLOCK_ENTITY_TYPE =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(BBQMod.MOD_ID, "grill"),
                     FabricBlockEntityTypeBuilder.create(GrillBlockEntity::new, ModBlocks.GRILL).build());
+    public static final BlockEntityType<SeasoningTableBlockEntity> SEASONING_TABLE_ENTITY_BLOCK_ENTITY_TYPE =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(BBQMod.MOD_ID, "seasoning_table"),
+                    FabricBlockEntityTypeBuilder.create(SeasoningTableBlockEntity::new, ModBlocks.SEASONING_TABLE).build());
 
     public static void registerBlockEntities() {
 
