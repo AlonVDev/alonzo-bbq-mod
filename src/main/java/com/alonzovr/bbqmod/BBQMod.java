@@ -3,7 +3,6 @@ package com.alonzovr.bbqmod;
 import com.alonzovr.bbqmod.block.ModBlocks;
 import com.alonzovr.bbqmod.block.entity.ModBlockEntities;
 import com.alonzovr.bbqmod.item.ModItems;
-import com.alonzovr.bbqmod.recipe.ModRecipeType;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
