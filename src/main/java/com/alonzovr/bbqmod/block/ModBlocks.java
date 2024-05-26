@@ -29,7 +29,6 @@ public class ModBlocks {
     public static void registerModBlocks() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
             entries.add(GRILL);
-            entries.add(SEASONING_TABLE);
         });
     }
 }
