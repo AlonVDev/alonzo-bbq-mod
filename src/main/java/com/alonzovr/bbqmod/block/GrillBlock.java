@@ -124,7 +124,7 @@ public class GrillBlock
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        if (state.get(WATERLOGGED).booleanValue()) {
+        if (!state.get(WATERLOGGED).booleanValue()) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
         if (direction == Direction.DOWN) {
@@ -150,6 +150,10 @@ public class GrillBlock
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         if (!state.get(LIT).booleanValue()) {
+            return;
+        }
+        if (state.get(LIT) && state.get(WATERLOGGED)) {
+            world.setBlockState(pos, state.with(LIT, false));
             return;
         }
         if (random.nextInt(10) == 0) {
