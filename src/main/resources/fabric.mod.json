@@ -20,9 +20,6 @@
 		],
 		"client": [
 			"com.alonzovr.bbqmod.BBQModClient"
-		],
-		"fabric-datagen": [
-			"com.alonzovr.bbqmod.BBQModDataGenerator"
 		]
 	},
 	"mixins": [

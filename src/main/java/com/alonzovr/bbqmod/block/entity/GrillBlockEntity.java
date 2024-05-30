@@ -3,6 +3,7 @@ package com.alonzovr.bbqmod.block.entity;
 import java.util.Optional;
 
 import com.alonzovr.bbqmod.block.GrillBlock;
+import com.alonzovr.bbqmod.util.SaucedItemsRegistry;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -10,6 +11,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
@@ -189,5 +191,22 @@ public class GrillBlockEntity extends BlockEntity implements Clearable {
             this.updateListeners();
         }
 
+    }
+
+    public void applySauceToItems(ItemStack sauceItem) {
+        for (int i = 0; i < this.itemsBeingCooked.size(); ++i) {
+            ItemStack itemStack = this.itemsBeingCooked.get(i);
+            if (!itemStack.isEmpty()) {
+                ItemStack saucedItem = this.getSaucedItem(sauceItem.getItem(), itemStack);
+                this.itemsBeingCooked.set(i, saucedItem);
+                this.cookingTimes[i] = 0;
+            }
+        }
+        this.updateListeners();
+    }
+
+    private ItemStack getSaucedItem(Item sauce, ItemStack originalItem) {
+        Item saucedItem = SaucedItemsRegistry.getSaucedItem(sauce, originalItem.getItem());
+        return new ItemStack(saucedItem, originalItem.getCount());
     }
 }

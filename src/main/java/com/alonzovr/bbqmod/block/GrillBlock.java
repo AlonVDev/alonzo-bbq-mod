@@ -3,6 +3,7 @@ package com.alonzovr.bbqmod.block;
 import java.util.Optional;
 
 import com.alonzovr.bbqmod.block.entity.ModBlockEntities;
+import com.alonzovr.bbqmod.util.ModTags;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
@@ -79,16 +80,23 @@ public class GrillBlock
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        ItemStack itemStack;
-        GrillBlockEntity grillBlockEntity;
-        Optional<CampfireCookingRecipe> optional;
+        ItemStack itemStack = player.getStackInHand(hand);
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof GrillBlockEntity && (optional = (grillBlockEntity = (GrillBlockEntity)blockEntity).getRecipeFor(itemStack = player.getStackInHand(hand))).isPresent()) {
-            if (!world.isClient && grillBlockEntity.addItem(player, player.getAbilities().creativeMode ? itemStack.copy() : itemStack, optional.get().getCookTime())) {
-                player.incrementStat(Stats.INTERACT_WITH_CAMPFIRE);
+
+        if (blockEntity instanceof GrillBlockEntity grillBlockEntity) {
+            if (itemStack.isIn(ModTags.Items.SAUCES)) {
+                grillBlockEntity.applySauceToItems(itemStack);
                 return ActionResult.SUCCESS;
             }
-            return ActionResult.CONSUME;
+
+            Optional<CampfireCookingRecipe> optional = grillBlockEntity.getRecipeFor(itemStack);
+            if (optional.isPresent()) {
+                if (!world.isClient && grillBlockEntity.addItem(player, player.getAbilities().creativeMode ? itemStack.copy() : itemStack, optional.get().getCookTime())) {
+                    player.incrementStat(Stats.INTERACT_WITH_CAMPFIRE);
+                    return ActionResult.SUCCESS;
+                }
+                return ActionResult.CONSUME;
+            }
         }
         return ActionResult.PASS;
     }

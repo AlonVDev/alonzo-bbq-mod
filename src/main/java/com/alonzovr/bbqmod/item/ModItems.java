@@ -12,7 +12,8 @@ public class ModItems {
     public static final Item KETCHUP_BOTTLE = registerItem("ketchup_bottle", new SauceBottleItem(new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.SAUCE_BOTTLE).maxCount(16)));
     public static final Item BARBECUE_BOTTLE = registerItem("barbecue_bottle", new SauceBottleItem(new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.SAUCE_BOTTLE).maxCount(16)));
     public static final Item MUSTARD_BOTTLE = registerItem("mustard_bottle", new SauceBottleItem(new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.SAUCE_BOTTLE).maxCount(16)));
-
+    public static final Item KETCHUP_SAUCED_BEEF = registerItem("ketchup_sauced_beef", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
+    public static final Item BARBECUE_SAUCED_BEEF = registerItem("barbecue_sauced_beef", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BBQMod.MOD_ID, name), item);
