@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "bbqmod:item/barbecue_sauced_beef"
+    "layer0": "bbqmod:item/barbecue_beef"
   }
 }

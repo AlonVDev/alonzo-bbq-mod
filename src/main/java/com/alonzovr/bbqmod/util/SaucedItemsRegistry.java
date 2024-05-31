@@ -12,11 +12,11 @@ public class SaucedItemsRegistry {
 
     static {
         Map<Item, Item> sauceAMap = new HashMap<>();
-        sauceAMap.put(Items.BEEF, ModItems.KETCHUP_SAUCED_BEEF);
+        sauceAMap.put(Items.BEEF, ModItems.KETCHUP_BEEF);
         //sauceAMap.put(Items.COOKED_CHICKEN, ModItems.SAUCED_CHICKEN_A);
 
         Map<Item, Item> sauceBMap = new HashMap<>();
-        sauceBMap.put(Items.BEEF, ModItems.BARBECUE_SAUCED_BEEF);
+        sauceBMap.put(Items.BEEF, ModItems.BARBECUE_BEEF);
         //sauceBMap.put(Items.COOKED_CHICKEN, ModItems.SAUCED_CHICKEN_B);
 
         SAUCED_ITEM_MAP.put(ModItems.KETCHUP_BOTTLE, sauceAMap);
