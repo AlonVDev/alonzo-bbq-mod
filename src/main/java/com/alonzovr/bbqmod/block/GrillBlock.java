@@ -85,7 +85,7 @@ public class GrillBlock
 
         if (blockEntity instanceof GrillBlockEntity grillBlockEntity) {
             if (itemStack.isIn(ModTags.Items.SAUCES)) {
-                grillBlockEntity.applySauceToItems(itemStack);
+                grillBlockEntity.applySauceToItems(itemStack, player);
                 return ActionResult.SUCCESS;
             }
 

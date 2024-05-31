@@ -8,11 +8,13 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.particle.ParticleTypes;
@@ -193,7 +195,7 @@ public class GrillBlockEntity extends BlockEntity implements Clearable {
 
     }
 
-    public void applySauceToItems(ItemStack sauceItem) {
+    public void applySauceToItems(ItemStack sauceItem, PlayerEntity player) {
         for (int i = 0; i < this.itemsBeingCooked.size(); ++i) {
             ItemStack itemStack = this.itemsBeingCooked.get(i);
             if (!itemStack.isEmpty()) {
@@ -203,6 +205,15 @@ public class GrillBlockEntity extends BlockEntity implements Clearable {
             }
         }
         this.updateListeners();
+
+        if (!player.getAbilities().creativeMode) {
+            sauceItem.decrement(1);
+            if (sauceItem.isEmpty()) {
+                player.setStackInHand(player.getActiveHand(), new ItemStack(Items.GLASS_BOTTLE));
+            } else {
+                player.giveItemStack(new ItemStack(Items.GLASS_BOTTLE));
+            }
+        }
     }
 
     private ItemStack getSaucedItem(Item sauce, ItemStack originalItem) {
