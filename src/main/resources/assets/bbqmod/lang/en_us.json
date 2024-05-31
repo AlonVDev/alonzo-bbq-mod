@@ -3,6 +3,8 @@
   "item.bbqmod.barbecue_bottle" : "Barbecue Bottle",
   "item.bbqmod.mustard_bottle" : "Mustard Bottle",
   "block.bbqmod.grill" : "Grill",
-  "item.bbqmod.ketchup_sauced_beef": "Beef With Ketchup",
-  "item.bbqmod.barbecue_sauced_beef": "Beef With Barbecue"
+  "item.bbqmod.ketchup_beef": "Beef With Ketchup",
+  "item.bbqmod.barbecue_beef": "Beef With Barbecue",
+  "item.bbqmod.cooked_ketchup_beef": "Steak With Ketchup",
+  "item.bbqmod.cooked_barbecue_beef": "Steak With Barbecue"
 }
