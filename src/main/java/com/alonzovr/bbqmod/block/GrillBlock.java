@@ -85,8 +85,12 @@ public class GrillBlock
 
         if (blockEntity instanceof GrillBlockEntity grillBlockEntity) {
             if (itemStack.isIn(ModTags.Items.SAUCES)) {
-                grillBlockEntity.applySauceToItems(itemStack, player);
-                return ActionResult.SUCCESS;
+                if (grillBlockEntity.canItemsBeSauced(itemStack)) {
+                    if (grillBlockEntity.applySauceToItems(itemStack, player)) {
+                        return ActionResult.SUCCESS;
+                    }
+                }
+                return ActionResult.FAIL;
             }
 
             Optional<CampfireCookingRecipe> optional = grillBlockEntity.getRecipeFor(itemStack);

@@ -195,29 +195,39 @@ public class GrillBlockEntity extends BlockEntity implements Clearable {
 
     }
 
-    public void applySauceToItems(ItemStack sauceItem, PlayerEntity player) {
+    public boolean applySauceToItems(ItemStack sauceItem, PlayerEntity player) {
+        boolean anyItemsSauced = false;
         for (int i = 0; i < this.itemsBeingCooked.size(); ++i) {
             ItemStack itemStack = this.itemsBeingCooked.get(i);
             if (!itemStack.isEmpty()) {
-                ItemStack saucedItem = this.getSaucedItem(sauceItem.getItem(), itemStack);
-                this.itemsBeingCooked.set(i, saucedItem);
-                this.cookingTimes[i] = 0;
+                Item saucedItem = SaucedItemsRegistry.getSaucedItem(sauceItem.getItem(), itemStack.getItem());
+                if (saucedItem != itemStack.getItem()) {
+                    this.itemsBeingCooked.set(i, new ItemStack(saucedItem, itemStack.getCount()));
+                    this.cookingTimes[i] = 0;
+                    anyItemsSauced = true;
+                }
             }
         }
-        this.updateListeners();
-
-        if (!player.getAbilities().creativeMode) {
-            sauceItem.decrement(1);
-            if (sauceItem.isEmpty()) {
-                player.setStackInHand(player.getActiveHand(), new ItemStack(Items.GLASS_BOTTLE));
-            } else {
-                player.giveItemStack(new ItemStack(Items.GLASS_BOTTLE));
+        if (anyItemsSauced) {
+            this.updateListeners();
+            if (!player.getAbilities().creativeMode) {
+                sauceItem.decrement(1);
+                if (sauceItem.isEmpty()) {
+                    player.setStackInHand(player.getActiveHand(), new ItemStack(Items.GLASS_BOTTLE));
+                } else {
+                    player.giveItemStack(new ItemStack(Items.GLASS_BOTTLE));
+                }
             }
         }
+        return anyItemsSauced;
     }
 
-    private ItemStack getSaucedItem(Item sauce, ItemStack originalItem) {
-        Item saucedItem = SaucedItemsRegistry.getSaucedItem(sauce, originalItem.getItem());
-        return new ItemStack(saucedItem, originalItem.getCount());
+    public boolean canItemsBeSauced(ItemStack sauceItem) {
+        for (ItemStack itemStack : this.itemsBeingCooked) {
+            if (!itemStack.isEmpty() && SaucedItemsRegistry.getSaucedItem(sauceItem.getItem(), itemStack.getItem()) != itemStack.getItem()) {
+                return true;
+            }
+        }
+        return false;
     }
 }
