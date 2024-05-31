@@ -9,9 +9,11 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
+    //Sauces
     public static final Item KETCHUP_BOTTLE = registerItem("ketchup_bottle", new SauceBottleItem(new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.SAUCE_BOTTLE).maxCount(16)));
     public static final Item BARBECUE_BOTTLE = registerItem("barbecue_bottle", new SauceBottleItem(new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.SAUCE_BOTTLE).maxCount(16)));
     public static final Item MUSTARD_BOTTLE = registerItem("mustard_bottle", new SauceBottleItem(new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.SAUCE_BOTTLE).maxCount(16)));
+    //Foods
     public static final Item KETCHUP_BEEF = registerItem("ketchup_beef", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
     public static final Item BARBECUE_BEEF = registerItem("barbecue_beef", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
     public static final Item COOKED_KETCHUP_BEEF = registerItem("cooked_ketchup_beef", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
@@ -24,7 +26,11 @@ public class ModItems {
     public static void registerModItems() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.addAfter(Items.HONEY_BOTTLE, KETCHUP_BOTTLE);
-            entries.addAfter(Items.HONEY_BOTTLE, BARBECUE_BOTTLE);
+            entries.addAfter(KETCHUP_BOTTLE, BARBECUE_BOTTLE);
+            entries.addAfter(Items.COOKED_SALMON, KETCHUP_BEEF);
+            entries.addAfter(KETCHUP_BEEF, COOKED_KETCHUP_BEEF);
+            entries.addAfter(COOKED_KETCHUP_BEEF, BARBECUE_BEEF);
+            entries.addAfter(BARBECUE_BEEF, COOKED_BARBECUE_BEEF);
             //entries.addAfter(Items.HONEY_BOTTLE, MUSTARD_BOTTLE);
         });
     }
