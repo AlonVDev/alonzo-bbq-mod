@@ -27,10 +27,6 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.addAfter(Items.HONEY_BOTTLE, KETCHUP_BOTTLE);
             entries.addAfter(KETCHUP_BOTTLE, BARBECUE_BOTTLE);
-            entries.addAfter(Items.COOKED_SALMON, KETCHUP_BEEF);
-            entries.addAfter(KETCHUP_BEEF, COOKED_KETCHUP_BEEF);
-            entries.addAfter(COOKED_KETCHUP_BEEF, BARBECUE_BEEF);
-            entries.addAfter(BARBECUE_BEEF, COOKED_BARBECUE_BEEF);
             //entries.addAfter(Items.HONEY_BOTTLE, MUSTARD_BOTTLE);
         });
     }

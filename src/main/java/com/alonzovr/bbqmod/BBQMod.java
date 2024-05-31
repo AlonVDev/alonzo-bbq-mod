@@ -2,6 +2,7 @@ package com.alonzovr.bbqmod;
 
 import com.alonzovr.bbqmod.block.ModBlocks;
 import com.alonzovr.bbqmod.block.entity.ModBlockEntities;
+import com.alonzovr.bbqmod.item.ModItemGroups;
 import com.alonzovr.bbqmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -17,5 +18,6 @@ public class BBQMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModBlockEntities.registerBlockEntities();
+		ModItemGroups.registerItemGroups();
 	}
 }
