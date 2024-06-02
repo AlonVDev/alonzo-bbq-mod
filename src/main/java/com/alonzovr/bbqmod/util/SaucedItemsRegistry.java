@@ -11,16 +11,16 @@ public class SaucedItemsRegistry {
     private static final Map<Item, Map<Item, Item>> SAUCED_ITEM_MAP = new HashMap<>();
 
     static {
-        Map<Item, Item> sauceAMap = new HashMap<>();
-        sauceAMap.put(Items.BEEF, ModItems.KETCHUP_BEEF);
-        //sauceAMap.put(Items.COOKED_CHICKEN, ModItems.SAUCED_CHICKEN_A);
+        Map<Item, Item> ketchupMap = new HashMap<>();
+        ketchupMap.put(Items.BEEF, ModItems.KETCHUP_BEEF);
+        //ketchupMap.put(Items.COOKED_CHICKEN, ModItems.SAUCED_CHICKEN_A);
 
-        Map<Item, Item> sauceBMap = new HashMap<>();
-        sauceBMap.put(Items.BEEF, ModItems.BARBECUE_BEEF);
-        //sauceBMap.put(Items.COOKED_CHICKEN, ModItems.SAUCED_CHICKEN_B);
+        Map<Item, Item> barbecueMap = new HashMap<>();
+        barbecueMap.put(Items.BEEF, ModItems.BARBECUE_BEEF);
+        //barbecueMap.put(Items.COOKED_CHICKEN, ModItems.SAUCED_CHICKEN_B);
 
-        SAUCED_ITEM_MAP.put(ModItems.KETCHUP_BOTTLE, sauceAMap);
-        SAUCED_ITEM_MAP.put(ModItems.BARBECUE_BOTTLE, sauceBMap);
+        SAUCED_ITEM_MAP.put(ModItems.KETCHUP_BOTTLE, ketchupMap);
+        SAUCED_ITEM_MAP.put(ModItems.BARBECUE_BOTTLE, barbecueMap);
     }
 
     public static Item getSaucedItem(Item sauce, Item normalItem) {
