@@ -31,5 +31,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.COOKED_BARBECUE_PORKCHOP, Models.GENERATED);
         itemModelGenerator.register(ModItems.KETCHUP_PORKCHOP, Models.GENERATED);
         itemModelGenerator.register(ModItems.COOKED_KETCHUP_PORKCHOP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BARBECUE_MUTTON, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_BARBECUE_MUTTON, Models.GENERATED);
+        itemModelGenerator.register(ModItems.KETCHUP_MUTTON, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_KETCHUP_MUTTON, Models.GENERATED);
     }
 }
