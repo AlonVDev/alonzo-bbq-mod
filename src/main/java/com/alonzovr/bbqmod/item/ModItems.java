@@ -18,14 +18,21 @@ public class ModItems {
     public static final Item BARBECUE_BEEF = registerItem("barbecue_beef", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
     public static final Item COOKED_KETCHUP_BEEF = registerItem("cooked_ketchup_beef", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_BEEF)));
     public static final Item COOKED_BARBECUE_BEEF = registerItem("cooked_barbecue_beef", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_BEEF)));
+
     public static final Item KETCHUP_PORKCHOP = registerItem("ketchup_porkchop", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
     public static final Item BARBECUE_PORKCHOP = registerItem("barbecue_porkchop", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
     public static final Item COOKED_KETCHUP_PORKCHOP = registerItem("cooked_ketchup_porkchop", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_BEEF)));
     public static final Item COOKED_BARBECUE_PORKCHOP = registerItem("cooked_barbecue_porkchop", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_BEEF)));
+
     public static final Item KETCHUP_MUTTON = registerItem("ketchup_mutton", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_MUTTON)));
     public static final Item BARBECUE_MUTTON = registerItem("barbecue_mutton", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_MUTTON)));
     public static final Item COOKED_KETCHUP_MUTTON = registerItem("cooked_ketchup_mutton", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_MUTTON)));
     public static final Item COOKED_BARBECUE_MUTTON = registerItem("cooked_barbecue_mutton", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_MUTTON)));
+
+    public static final Item KETCHUP_CHICKEN = registerItem("ketchup_chicken", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_CHICKEN)));
+    public static final Item BARBECUE_CHICKEN = registerItem("barbecue_chicken", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_CHICKEN)));
+    public static final Item COOKED_KETCHUP_CHICKEN = registerItem("cooked_ketchup_chicken", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_CHICKEN)));
+    public static final Item COOKED_BARBECUE_CHICKEN = registerItem("cooked_barbecue_chicken", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_CHICKEN)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BBQMod.MOD_ID, name), item);

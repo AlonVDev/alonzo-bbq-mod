@@ -14,10 +14,14 @@ public class SaucedItemsRegistry {
         Map<Item, Item> ketchupMap = new HashMap<>();
         ketchupMap.put(Items.BEEF, ModItems.KETCHUP_BEEF);
         ketchupMap.put(Items.PORKCHOP, ModItems.KETCHUP_PORKCHOP);
+        ketchupMap.put(Items.MUTTON, ModItems.KETCHUP_MUTTON);
+        ketchupMap.put(Items.CHICKEN, ModItems.KETCHUP_CHICKEN);
 
         Map<Item, Item> barbecueMap = new HashMap<>();
         barbecueMap.put(Items.BEEF, ModItems.BARBECUE_BEEF);
         barbecueMap.put(Items.PORKCHOP, ModItems.BARBECUE_PORKCHOP);
+        barbecueMap.put(Items.MUTTON, ModItems.BARBECUE_MUTTON);
+        barbecueMap.put(Items.CHICKEN, ModItems.BARBECUE_CHICKEN);
 
         SAUCED_ITEM_MAP.put(ModItems.KETCHUP_BOTTLE, ketchupMap);
         SAUCED_ITEM_MAP.put(ModItems.BARBECUE_BOTTLE, barbecueMap);
