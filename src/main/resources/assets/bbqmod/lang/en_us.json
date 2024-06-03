@@ -7,5 +7,9 @@
   "item.bbqmod.ketchup_beef": "Beef With Ketchup",
   "item.bbqmod.barbecue_beef": "Beef With Barbecue",
   "item.bbqmod.cooked_ketchup_beef": "Steak With Ketchup",
-  "item.bbqmod.cooked_barbecue_beef": "Steak With Barbecue"
+  "item.bbqmod.cooked_barbecue_beef": "Steak With Barbecue",
+  "item.bbqmod.ketchup_porkchop": "Porkchop With Ketchup",
+  "item.bbqmod.barbecue_porkchop": "Porkchop With Barbecue",
+  "item.bbqmod.cooked_ketchup_porkchop": "Cooked Porkchop With Ketchup",
+  "item.bbqmod.cooked_barbecue_porkchop": "Cooked Porkchop With Barbecue"
 }

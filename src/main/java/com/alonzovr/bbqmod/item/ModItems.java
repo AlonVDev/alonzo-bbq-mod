@@ -16,8 +16,12 @@ public class ModItems {
     //Foods
     public static final Item KETCHUP_BEEF = registerItem("ketchup_beef", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
     public static final Item BARBECUE_BEEF = registerItem("barbecue_beef", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
-    public static final Item COOKED_KETCHUP_BEEF = registerItem("cooked_ketchup_beef", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
-    public static final Item COOKED_BARBECUE_BEEF = registerItem("cooked_barbecue_beef", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
+    public static final Item COOKED_KETCHUP_BEEF = registerItem("cooked_ketchup_beef", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_BEEF)));
+    public static final Item COOKED_BARBECUE_BEEF = registerItem("cooked_barbecue_beef", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_BEEF)));
+    public static final Item KETCHUP_PORKCHOP = registerItem("ketchup_porkchop", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
+    public static final Item BARBECUE_PORKCHOP = registerItem("barbecue_porkchop", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
+    public static final Item COOKED_KETCHUP_PORKCHOP = registerItem("cooked_ketchup_porkchop", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_BEEF)));
+    public static final Item COOKED_BARBECUE_PORKCHOP = registerItem("cooked_barbecue_porkchop", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_BEEF)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BBQMod.MOD_ID, name), item);

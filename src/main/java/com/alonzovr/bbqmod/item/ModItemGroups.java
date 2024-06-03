@@ -25,6 +25,10 @@ public class ModItemGroups {
                             entries.add(ModItems.COOKED_KETCHUP_BEEF);
                             entries.add(ModItems.BARBECUE_BEEF);
                             entries.add(ModItems.COOKED_BARBECUE_BEEF);
+                            entries.add(ModItems.KETCHUP_PORKCHOP);
+                            entries.add(ModItems.COOKED_KETCHUP_PORKCHOP);
+                            entries.add(ModItems.BARBECUE_PORKCHOP);
+                            entries.add(ModItems.COOKED_BARBECUE_PORKCHOP);
                         }).build());
 
     public static void registerItemGroups() {
