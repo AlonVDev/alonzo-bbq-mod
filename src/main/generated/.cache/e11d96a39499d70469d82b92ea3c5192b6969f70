@@ -1,0 +1,9 @@
+// 1.20.1	2024-06-03T11:56:59.8989545	Alonzo's BBQ Mod/Model Definitions
+1a3269d4b31bf32ac17ff40444be89c662c615bd assets\bbqmod\models\item\barbecue_beef.json
+a005b0add3b9de11b14dfcc5adaadf53c363c835 assets\bbqmod\models\item\ketchup_porkchop.json
+9ec16c671fe869b88de38dfc87f79ae8325d24ff assets\bbqmod\models\item\barbecue_porkchop.json
+aa2596d9bf02d8000918ee1919ef6697586c3b97 assets\bbqmod\models\item\ketchup_beef.json
+468504f5aebf117a07a66873db9302245113851a assets\bbqmod\models\item\cooked_barbecue_porkchop.json
+ccca54c6821195d586d4900459fd8c2c5fa3f5a5 assets\bbqmod\models\item\cooked_barbecue_beef.json
+4405b2bf21e500daf622fa63ea3dee5aa1a097a6 assets\bbqmod\models\item\cooked_ketchup_porkchop.json
+fcb3df231e791c9ef2c715cf87672e67a8c8a089 assets\bbqmod\models\item\cooked_ketchup_beef.json
