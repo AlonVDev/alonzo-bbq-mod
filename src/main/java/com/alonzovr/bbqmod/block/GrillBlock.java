@@ -58,7 +58,30 @@ import org.jetbrains.annotations.Nullable;
 public class GrillBlock
         extends BlockWithEntity
         implements Waterloggable {
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 8.0, 0.0, 16.0, 16.0, 16.0);
+    protected static final VoxelShape SHAPE1 = Block.createCuboidShape(0, 0, 0, 2, 16, 2);
+    protected static final VoxelShape SHAPE2 = Block.createCuboidShape(14, 0, 0, 16, 16, 2);
+    protected static final VoxelShape SHAPE3 = Block.createCuboidShape(14, 0, 14, 16, 16, 16);
+    protected static final VoxelShape SHAPE4 = Block.createCuboidShape(0, 0, 14, 2, 16, 16);
+    protected static final VoxelShape SHAPE5 = Block.createCuboidShape(2, 12, 0, 14, 16, 2);
+    protected static final VoxelShape SHAPE6 = Block.createCuboidShape(2, 12, 14, 14, 16, 16);
+    protected static final VoxelShape SHAPE7 = Block.createCuboidShape(14, 12, 2, 16, 16, 14);
+    protected static final VoxelShape SHAPE8 = Block.createCuboidShape(0, 12, 2, 2, 16, 14);
+    protected static final VoxelShape SHAPE9 = Block.createCuboidShape(2, 13, 2, 14, 15, 14);
+    protected static final VoxelShape SHAPE10 = Block.createCuboidShape(2, 8, 2, 14, 12, 14);
+
+    protected static final VoxelShape SHAPE = VoxelShapes.union(
+            SHAPE1,
+            SHAPE2,
+            SHAPE3,
+            SHAPE4,
+            SHAPE5,
+            SHAPE6,
+            SHAPE7,
+            SHAPE8,
+            SHAPE9,
+            SHAPE10
+    );
+
     public static final BooleanProperty LIT = Properties.LIT;
     public static final BooleanProperty SIGNAL_FIRE = Properties.SIGNAL_FIRE;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
