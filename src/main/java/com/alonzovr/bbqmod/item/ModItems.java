@@ -34,6 +34,11 @@ public class ModItems {
     public static final Item COOKED_KETCHUP_CHICKEN = registerItem("cooked_ketchup_chicken", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_CHICKEN)));
     public static final Item COOKED_BARBECUE_CHICKEN = registerItem("cooked_barbecue_chicken", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_CHICKEN)));
 
+    public static final Item KETCHUP_RABBIT = registerItem("ketchup_rabbit", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_RABBIT)));
+    public static final Item BARBECUE_RABBIT = registerItem("barbecue_rabbit", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_RABBIT)));
+    public static final Item COOKED_KETCHUP_RABBIT = registerItem("cooked_ketchup_rabbit", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_RABBIT)));
+    public static final Item COOKED_BARBECUE_RABBIT = registerItem("cooked_barbecue_rabbit", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_RABBIT)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BBQMod.MOD_ID, name), item);
     }
