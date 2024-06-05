@@ -19,5 +19,9 @@
   "item.bbqmod.ketchup_chicken": "Chicken With Ketchup",
   "item.bbqmod.barbecue_chicken": "Chicken With Barbecue",
   "item.bbqmod.cooked_ketchup_chicken": "Cooked Chicken With Ketchup",
-  "item.bbqmod.cooked_barbecue_chicken": "Cooked Chicken With Barbecue"
+  "item.bbqmod.cooked_barbecue_chicken": "Cooked Chicken With Barbecue",
+  "item.bbqmod.ketchup_rabbit": "Rabbit With Ketchup",
+  "item.bbqmod.barbecue_rabbit": "Rabbit With Barbecue",
+  "item.bbqmod.cooked_ketchup_rabbit": "Cooked Rabbit With Ketchup",
+  "item.bbqmod.cooked_barbecue_rabbit": "Cooked Rabbit With Barbecue"
 }
