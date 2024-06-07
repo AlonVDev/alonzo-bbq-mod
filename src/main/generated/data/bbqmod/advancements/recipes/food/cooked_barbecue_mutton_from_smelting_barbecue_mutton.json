@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_barbecue_mutton": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bbqmod:barbecue_mutton"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cooked_barbecue_mutton_from_smelting_barbecue_mutton"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_barbecue_mutton",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cooked_barbecue_mutton_from_smelting_barbecue_mutton"
+    ]
+  },
+  "sends_telemetry_event": false
+}
