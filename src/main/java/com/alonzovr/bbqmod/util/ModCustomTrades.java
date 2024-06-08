@@ -21,5 +21,17 @@ public class ModCustomTrades {
                     4, 5, 0.05f
             ));
         });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.BUTCHER, 2, factories -> {
+            factories.add((entity , random) -> new TradeOffer(
+                    new ItemStack(ModItems.BARBECUE_BOTTLE, 4),
+                    new ItemStack(Items.EMERALD, 2),
+                    4, 5, 0.05f
+            ));
+            factories.add((entity , random) -> new TradeOffer(
+                    new ItemStack(ModItems.KETCHUP_BOTTLE, 4),
+                    new ItemStack(Items.EMERALD, 2),
+                    4, 5, 0.05f
+            ));
+        });
     }
 }
