@@ -4,12 +4,8 @@ import com.alonzovr.bbqmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.recipe.RecipeSerializer;
-import net.minecraft.recipe.book.RecipeCategory;
 
-import java.util.Collections;
-import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
@@ -19,7 +15,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        //Campfire/Grill
+        // Campfire/Grill
         offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.BARBECUE_BEEF, ModItems.COOKED_BARBECUE_BEEF, 0.35f);
         offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.KETCHUP_BEEF, ModItems.COOKED_KETCHUP_BEEF, 0.35f);
 
@@ -35,7 +31,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.BARBECUE_RABBIT, ModItems.COOKED_BARBECUE_RABBIT, 0.35f);
         offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.KETCHUP_RABBIT, ModItems.COOKED_KETCHUP_RABBIT, 0.35f);
 
-        //Smelting
+        // Smelting
         offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.BARBECUE_BEEF, ModItems.COOKED_BARBECUE_BEEF, 0.35f);
         offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.KETCHUP_BEEF, ModItems.COOKED_KETCHUP_BEEF, 0.35f);
 
@@ -51,7 +47,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.BARBECUE_RABBIT, ModItems.COOKED_BARBECUE_RABBIT, 0.35f);
         offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.KETCHUP_RABBIT, ModItems.COOKED_KETCHUP_RABBIT, 0.35f);
 
-        //Smoking
+        // Smoking
         offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, 100, ModItems.BARBECUE_BEEF, ModItems.COOKED_BARBECUE_BEEF, 0.35f);
         offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, 100, ModItems.KETCHUP_BEEF, ModItems.COOKED_KETCHUP_BEEF, 0.35f);
 
