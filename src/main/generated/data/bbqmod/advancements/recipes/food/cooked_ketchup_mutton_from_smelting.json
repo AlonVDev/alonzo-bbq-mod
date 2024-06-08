@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ketchup_rabbit": {
+    "has_ketchup_mutton": {
       "conditions": {
         "items": [
           {
             "items": [
-              "bbqmod:ketchup_rabbit"
+              "bbqmod:ketchup_mutton"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cooked_ketchup_rabbit_from_smelting_ketchup_rabbit"
+        "recipe": "minecraft:cooked_ketchup_mutton_from_smelting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_ketchup_rabbit",
+      "has_ketchup_mutton",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cooked_ketchup_rabbit_from_smelting_ketchup_rabbit"
+      "minecraft:cooked_ketchup_mutton_from_smelting"
     ]
   },
   "sends_telemetry_event": false

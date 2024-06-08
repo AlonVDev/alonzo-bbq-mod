@@ -36,20 +36,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.KETCHUP_RABBIT, ModItems.COOKED_KETCHUP_RABBIT, 0.35f);
 
         //Smelting
-        offerSmelting(exporter, Collections.singletonList(ModItems.BARBECUE_BEEF) , RecipeCategory.FOOD,ModItems.COOKED_BARBECUE_BEEF, 0.35f, 200, "");
-        offerSmelting(exporter, Collections.singletonList(ModItems.KETCHUP_BEEF) , RecipeCategory.FOOD,ModItems.COOKED_KETCHUP_BEEF, 0.35f, 200, "");
+        offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.BARBECUE_BEEF, ModItems.COOKED_BARBECUE_BEEF, 0.35f);
+        offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.KETCHUP_BEEF, ModItems.COOKED_KETCHUP_BEEF, 0.35f);
 
-        offerSmelting(exporter, Collections.singletonList(ModItems.BARBECUE_PORKCHOP) , RecipeCategory.FOOD,ModItems.COOKED_BARBECUE_PORKCHOP, 0.35f, 200, "");
-        offerSmelting(exporter, Collections.singletonList(ModItems.KETCHUP_PORKCHOP) , RecipeCategory.FOOD,ModItems.COOKED_KETCHUP_PORKCHOP, 0.35f, 200, "");
+        offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.BARBECUE_PORKCHOP, ModItems.COOKED_BARBECUE_PORKCHOP, 0.35f);
+        offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.KETCHUP_PORKCHOP, ModItems.COOKED_KETCHUP_PORKCHOP, 0.35f);
 
-        offerSmelting(exporter, Collections.singletonList(ModItems.BARBECUE_MUTTON) , RecipeCategory.FOOD,ModItems.COOKED_BARBECUE_MUTTON, 0.35f, 200, "");
-        offerSmelting(exporter, Collections.singletonList(ModItems.KETCHUP_MUTTON) , RecipeCategory.FOOD,ModItems.COOKED_KETCHUP_MUTTON, 0.35f, 200, "");
+        offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.BARBECUE_MUTTON, ModItems.COOKED_BARBECUE_MUTTON, 0.35f);
+        offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.KETCHUP_MUTTON, ModItems.COOKED_KETCHUP_MUTTON, 0.35f);
 
-        offerSmelting(exporter, Collections.singletonList(ModItems.BARBECUE_CHICKEN) , RecipeCategory.FOOD,ModItems.COOKED_BARBECUE_CHICKEN, 0.35f, 200, "");
-        offerSmelting(exporter, Collections.singletonList(ModItems.KETCHUP_CHICKEN) , RecipeCategory.FOOD,ModItems.COOKED_KETCHUP_CHICKEN, 0.35f, 200, "");
+        offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.BARBECUE_CHICKEN, ModItems.COOKED_BARBECUE_CHICKEN, 0.35f);
+        offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.KETCHUP_CHICKEN, ModItems.COOKED_KETCHUP_CHICKEN, 0.35f);
 
-        offerSmelting(exporter, Collections.singletonList(ModItems.BARBECUE_RABBIT) , RecipeCategory.FOOD,ModItems.COOKED_BARBECUE_RABBIT, 0.35f, 200, "");
-        offerSmelting(exporter, Collections.singletonList(ModItems.KETCHUP_RABBIT) , RecipeCategory.FOOD,ModItems.COOKED_KETCHUP_RABBIT, 0.35f, 200, "");
+        offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.BARBECUE_RABBIT, ModItems.COOKED_BARBECUE_RABBIT, 0.35f);
+        offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.KETCHUP_RABBIT, ModItems.COOKED_KETCHUP_RABBIT, 0.35f);
 
         //Smoking
         offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, 100, ModItems.BARBECUE_BEEF, ModItems.COOKED_BARBECUE_BEEF, 0.35f);
