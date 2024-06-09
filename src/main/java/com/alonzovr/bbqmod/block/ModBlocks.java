@@ -14,7 +14,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-    public static final Block GRILL = registerBlock("grill", new GrillBlock(true, 1, FabricBlockSettings.copyOf(Blocks.CAULDRON)));
+    public static final Block GRILL = registerBlock("grill", new GrillBlock(true, 1, FabricBlockSettings.copyOf(Blocks.CAULDRON).luminance(Blocks.createLightLevelFromLitBlockState(3))));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
