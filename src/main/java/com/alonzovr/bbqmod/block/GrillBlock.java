@@ -187,7 +187,7 @@ public class GrillBlock
         if (!state.get(LIT).booleanValue()) {
             return;
         }
-        if (state.get(LIT) && state.get(WATERLOGGED)) {
+        if (state.get(WATERLOGGED)) {
             world.setBlockState(pos, state.with(LIT, false));
             return;
         }

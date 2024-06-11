@@ -203,7 +203,6 @@ public class GrillBlockEntity extends BlockEntity implements Clearable {
                 Item saucedItem = SaucedItemsRegistry.getSaucedItem(sauceItem.getItem(), itemStack.getItem());
                 if (saucedItem != itemStack.getItem()) {
                     this.itemsBeingCooked.set(i, new ItemStack(saucedItem, itemStack.getCount()));
-                    this.cookingTimes[i] = 0;
                     anyItemsSauced = true;
                 }
             }

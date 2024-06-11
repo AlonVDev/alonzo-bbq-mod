@@ -42,7 +42,7 @@ public abstract class CampfireBlockMixin extends BlockWithEntity
         if (!state.get(LIT).booleanValue()) {
             return;
         }
-        if (state.get(LIT) && state.get(WATERLOGGED)) {
+        if (state.get(WATERLOGGED)) {
             world.setBlockState(pos, state.with(LIT, false));
             return;
         }
