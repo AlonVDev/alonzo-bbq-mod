@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-08T11:06:17.0664572	Alonzo's BBQ Mod/Model Definitions
+// 1.20.1	2024-06-12T12:22:06.1196331	Alonzo's BBQ Mod/Model Definitions
 fa65628a2b8fcbc4112e4ae0bfc1eaa115e13029 assets\bbqmod\models\item\ketchup_mutton.json
 d59db204dbc1d73187bc654cbcc6d9bf423d2d1b assets\bbqmod\models\item\ketchup_rabbit.json
 1a3269d4b31bf32ac17ff40444be89c662c615bd assets\bbqmod\models\item\barbecue_beef.json
@@ -16,7 +16,6 @@ cc9772294aaffc07e973de8f43f2f3dccdae325d assets\bbqmod\models\item\barbecue_rabb
 ad33aceb0eaf5f4a3b6b0fd6030ed65d730874ea assets\bbqmod\models\item\barbecue_chicken.json
 fcb3df231e791c9ef2c715cf87672e67a8c8a089 assets\bbqmod\models\item\cooked_ketchup_beef.json
 4405b2bf21e500daf622fa63ea3dee5aa1a097a6 assets\bbqmod\models\item\cooked_ketchup_porkchop.json
-29d35f14c7b4c8d643e22bc8abb0017ac08b07ad assets\bbqmod\models\item\mustard_bottle.json
 9084146c7c5b13492003aa0fef7e08d4c30781e1 assets\bbqmod\models\item\ketchup_chicken.json
 86b1268d1774fb6a730075d3684c50ad75110dea assets\bbqmod\models\item\barbecue_mutton.json
 9f79f0623cbb5353d2b33b5c16fe8e94fd34e960 assets\bbqmod\models\item\cooked_barbecue_rabbit.json

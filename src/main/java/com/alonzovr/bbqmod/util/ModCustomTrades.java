@@ -10,24 +10,24 @@ import net.minecraft.village.VillagerProfession;
 public class ModCustomTrades {
     public static void registerCustomTrades() {
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.BUTCHER, 1, factories -> {
-            factories.add((entity , random) -> new TradeOffer(
+            factories.add((entity, random) -> new TradeOffer(
                     new ItemStack(Items.EMERALD, 1),
                     new ItemStack(ModItems.BARBECUE_BOTTLE, 2),
                     4, 5, 0.05f
             ));
-            factories.add((entity , random) -> new TradeOffer(
+            factories.add((entity, random) -> new TradeOffer(
                     new ItemStack(Items.EMERALD, 1),
                     new ItemStack(ModItems.KETCHUP_BOTTLE, 2),
                     4, 5, 0.05f
             ));
         });
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.BUTCHER, 2, factories -> {
-            factories.add((entity , random) -> new TradeOffer(
+            factories.add((entity, random) -> new TradeOffer(
                     new ItemStack(ModItems.BARBECUE_BOTTLE, 4),
                     new ItemStack(Items.EMERALD, 2),
                     4, 5, 0.05f
             ));
-            factories.add((entity , random) -> new TradeOffer(
+            factories.add((entity, random) -> new TradeOffer(
                     new ItemStack(ModItems.KETCHUP_BOTTLE, 4),
                     new ItemStack(Items.EMERALD, 2),
                     4, 5, 0.05f

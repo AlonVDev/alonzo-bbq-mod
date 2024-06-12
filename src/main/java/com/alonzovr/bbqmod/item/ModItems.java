@@ -12,7 +12,7 @@ public class ModItems {
     //Sauces
     public static final Item KETCHUP_BOTTLE = registerItem("ketchup_bottle", new SauceBottleItem(new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.SAUCE_BOTTLE).maxCount(16)));
     public static final Item BARBECUE_BOTTLE = registerItem("barbecue_bottle", new SauceBottleItem(new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.SAUCE_BOTTLE).maxCount(16)));
-    public static final Item MUSTARD_BOTTLE = registerItem("mustard_bottle", new SauceBottleItem(new Item.Settings().recipeRemainder(Items.GLASS_BOTTLE).food(ModFoodComponents.SAUCE_BOTTLE).maxCount(16)));
+
     //Foods
     public static final Item KETCHUP_BEEF = registerItem("ketchup_beef", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
     public static final Item BARBECUE_BEEF = registerItem("barbecue_beef", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
@@ -38,6 +38,7 @@ public class ModItems {
     public static final Item BARBECUE_RABBIT = registerItem("barbecue_rabbit", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_RABBIT)));
     public static final Item COOKED_KETCHUP_RABBIT = registerItem("cooked_ketchup_rabbit", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_RABBIT)));
     public static final Item COOKED_BARBECUE_RABBIT = registerItem("cooked_barbecue_rabbit", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_RABBIT)));
+    
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BBQMod.MOD_ID, name), item);
