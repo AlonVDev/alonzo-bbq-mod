@@ -6,7 +6,6 @@ import com.alonzovr.bbqmod.block.GrillBlock;
 import com.alonzovr.bbqmod.util.SaucedItemsRegistry;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;
