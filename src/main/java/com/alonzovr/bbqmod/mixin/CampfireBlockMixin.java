@@ -34,7 +34,7 @@ public abstract class CampfireBlockMixin extends BlockWithEntity
         BlockPos blockPos;
         World worldAccess = ctx.getWorld();
         boolean bl = worldAccess.getFluidState(blockPos = ctx.getBlockPos()).getFluid() == Fluids.WATER;
-        return (BlockState)((BlockState)((BlockState)((BlockState)this.getDefaultState().with(WATERLOGGED, bl)).with(SIGNAL_FIRE, this.isSignalFireBaseBlock(worldAccess.getBlockState(blockPos.down())))).with(LIT, bl)).with(FACING, ctx.getHorizontalPlayerFacing());
+        return (BlockState)((BlockState)((BlockState)((BlockState)this.getDefaultState().with(WATERLOGGED, bl)).with(SIGNAL_FIRE, this.isSignalFireBaseBlock(worldAccess.getBlockState(blockPos.down())))).with(LIT, false)).with(FACING, ctx.getHorizontalPlayerFacing());
     }
 
     @Override
