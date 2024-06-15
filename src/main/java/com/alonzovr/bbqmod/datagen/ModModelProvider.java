@@ -1,5 +1,7 @@
 package com.alonzovr.bbqmod.datagen;
 
+import com.alonzovr.bbqmod.block.ModBlocks;
+import com.alonzovr.bbqmod.block.TomatoCropBlock;
 import com.alonzovr.bbqmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -14,7 +16,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-
+        blockStateModelGenerator.registerCrop(ModBlocks.TOMATO_CROP, TomatoCropBlock.AGE, 0, 1, 2, 3, 4, 5);
     }
 
     @Override

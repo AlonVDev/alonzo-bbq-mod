@@ -1,6 +1,7 @@
 package com.alonzovr.bbqmod.item;
 
 import com.alonzovr.bbqmod.BBQMod;
+import com.alonzovr.bbqmod.block.ModBlocks;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
@@ -40,7 +41,8 @@ public class ModItems {
     public static final Item COOKED_BARBECUE_RABBIT = registerItem("cooked_barbecue_rabbit", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_RABBIT)));
 
     public static final Item TOMATO = registerItem("tomato", new Item(new FabricItemSettings().food(ModFoodComponents.TOMATO)));
-    
+    public static final Item TOMATO_SEEDS = registerItem("tomato_seeds", new AliasedBlockItem(ModBlocks.TOMATO_CROP, new FabricItemSettings()));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BBQMod.MOD_ID, name), item);
@@ -50,7 +52,10 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.addAfter(Items.HONEY_BOTTLE, KETCHUP_BOTTLE);
             entries.addAfter(KETCHUP_BOTTLE, BARBECUE_BOTTLE);
-            //entries.addAfter(Items.HONEY_BOTTLE, MUSTARD_BOTTLE);
+            entries.addAfter(Items.BEETROOT, TOMATO);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+            entries.addAfter(Items.BEETROOT_SEEDS, TOMATO_SEEDS);
         });
     }
 }

@@ -15,6 +15,7 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
     public static final Block GRILL = registerBlock("grill", new GrillBlock(true, 1, FabricBlockSettings.copyOf(Blocks.CAULDRON).luminance(Blocks.createLightLevelFromLitBlockState(3))));
+    public static final Block TOMATO_CROP = Registry.register(Registries.BLOCK, new Identifier(BBQMod.MOD_ID, "tomato_crop"), new TomatoCropBlock(FabricBlockSettings.copyOf(Blocks.SWEET_BERRY_BUSH)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
