@@ -42,7 +42,7 @@ public class GrillBlockEntityRenderer
             ItemStack itemStack = defaultedList.get(l);
             if (itemStack == ItemStack.EMPTY) continue;
             matrixStack.push();
-            matrixStack.translate(0.5f, 0.95f, 0.5f);
+            matrixStack.translate(0.5f, 0.94921875f, 0.5f);
             //0.44921875f
             //Direction direction2 = Direction.fromHorizontal((l + direction.getHorizontal()) % 4);
             float g = -direction.asRotation();
