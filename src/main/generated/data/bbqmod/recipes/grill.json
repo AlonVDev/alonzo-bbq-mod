@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "I": {
-      "item": "minecraft:iron_ingot"
+    "B": {
+      "item": "minecraft:iron_bars"
     },
     "C": {
       "item": "minecraft:coal_block"
     },
-    "B": {
-      "item": "minecraft:iron_bars"
+    "I": {
+      "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [
@@ -19,5 +19,6 @@
   ],
   "result": {
     "item": "bbqmod:grill"
-  }
+  },
+  "show_notification": true
 }
