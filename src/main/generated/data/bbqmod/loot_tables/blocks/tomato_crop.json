@@ -23,11 +23,11 @@
                   }
                 }
               ],
-              "name": "bbqmod:tomato"
+              "name": "bbqmod:tomato_seeds"
             },
             {
               "type": "minecraft:item",
-              "name": "bbqmod:tomato_seeds"
+              "name": "bbqmod:tomato"
             }
           ]
         }
@@ -59,7 +59,7 @@
               }
             }
           ],
-          "name": "bbqmod:tomato_seeds"
+          "name": "bbqmod:tomato"
         }
       ],
       "rolls": 1.0

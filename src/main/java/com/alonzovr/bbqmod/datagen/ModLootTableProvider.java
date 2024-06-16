@@ -17,6 +17,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         BlockStatePropertyLootCondition.Builder builder = BlockStatePropertyLootCondition.builder(ModBlocks.TOMATO_CROP).properties(StatePredicate.Builder.create()
                 .exactMatch(TomatoCropBlock.AGE, 5));
-        addDrop(ModBlocks.TOMATO_CROP, cropDrops(ModBlocks.TOMATO_CROP, ModItems.TOMATO, ModItems.TOMATO_SEEDS, builder));
+        addDrop(ModBlocks.TOMATO_CROP, cropDrops(ModBlocks.TOMATO_CROP, ModItems.TOMATO_SEEDS, ModItems.TOMATO, builder));
     }
 }
