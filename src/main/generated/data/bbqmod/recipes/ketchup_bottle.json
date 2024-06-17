@@ -1,18 +1,23 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
+  "type": "minecraft:crafting_shaped",
+  "category": "food",
+  "key": {
+    "B": {
       "item": "minecraft:glass_bottle"
     },
-    {
+    "S": {
       "item": "minecraft:sugar"
     },
-    {
+    "T": {
       "item": "bbqmod:tomato"
     }
+  },
+  "pattern": [
+    "TS",
+    "B "
   ],
   "result": {
     "item": "bbqmod:ketchup_bottle"
-  }
+  },
+  "show_notification": true
 }

@@ -82,13 +82,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.COAL_BLOCK), conditionsFromItem(Items.COAL_BLOCK))
                 .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GRILL)));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.KETCHUP_BOTTLE)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.KETCHUP_BOTTLE, 1)
+                .pattern("TS")
+                .pattern("B ")
+                .input('T', ModItems.TOMATO)
+                .input('S', Items.SUGAR)
+                .input('B', Items.GLASS_BOTTLE)
+                .criterion(hasItem(ModItems.TOMATO), conditionsFromItem(ModItems.TOMATO))
+                .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                .criterion(hasItem(Items.GLASS_BOTTLE), conditionsFromItem(Items.GLASS_BOTTLE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.KETCHUP_BOTTLE)));
+
+        /*ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.KETCHUP_BOTTLE)
                 .input(Items.GLASS_BOTTLE)
                 .input(Items.SUGAR)
                 .input(ModItems.TOMATO)
                 .criterion(hasItem(Items.GLASS_BOTTLE), conditionsFromItem(Items.GLASS_BOTTLE))
                 .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
                 .criterion(hasItem(ModItems.TOMATO), conditionsFromItem(ModItems.TOMATO))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.KETCHUP_BOTTLE)));
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.KETCHUP_BOTTLE)));*/
     }
 }

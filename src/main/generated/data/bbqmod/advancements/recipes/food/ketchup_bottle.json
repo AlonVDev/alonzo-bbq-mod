@@ -46,9 +46,9 @@
   },
   "requirements": [
     [
-      "has_glass_bottle",
-      "has_sugar",
       "has_tomato",
+      "has_sugar",
+      "has_glass_bottle",
       "has_the_recipe"
     ]
   ],
