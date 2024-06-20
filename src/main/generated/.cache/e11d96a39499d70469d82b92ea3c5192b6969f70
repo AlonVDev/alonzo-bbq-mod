@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-17T15:35:08.094519	Alonzo's BBQ Mod/Model Definitions
+// 1.20.1	2024-06-20T16:40:32.7225114	Alonzo's BBQ Mod/Model Definitions
 d59db204dbc1d73187bc654cbcc6d9bf423d2d1b assets\bbqmod\models\item\ketchup_rabbit.json
 1a3269d4b31bf32ac17ff40444be89c662c615bd assets\bbqmod\models\item\barbecue_beef.json
 333bad055b313d9315fc25b83749ca1bcbc56288 assets\bbqmod\models\item\cooked_ketchup_rabbit.json
@@ -12,8 +12,8 @@ b847c06aa6642052f5c5034809cceb87ea9da43f assets\bbqmod\models\block\tomato_crop_
 4eb5e3f3d72ff53e8909b43664c3cff7bbde7293 assets\bbqmod\models\item\tomato_seeds.json
 9084146c7c5b13492003aa0fef7e08d4c30781e1 assets\bbqmod\models\item\ketchup_chicken.json
 f832e7298f6904aeb0c9b1b524794acef6de47a5 assets\bbqmod\models\block\tomato_crop_stage1.json
-9f79f0623cbb5353d2b33b5c16fe8e94fd34e960 assets\bbqmod\models\item\cooked_barbecue_rabbit.json
 f8fd70c04f669c951542ee5a4ab5fbabffdc3de9 assets\bbqmod\models\item\cooked_ketchup_chicken.json
+9f79f0623cbb5353d2b33b5c16fe8e94fd34e960 assets\bbqmod\models\item\cooked_barbecue_rabbit.json
 bd8d7d742370d9d777d5dbf7c9ade4df31300a15 assets\bbqmod\models\block\tomato_crop_stage4.json
 fa65628a2b8fcbc4112e4ae0bfc1eaa115e13029 assets\bbqmod\models\item\ketchup_mutton.json
 2027d5b594b7f19454a2e56a358d25cf7872d17d assets\bbqmod\models\item\tomato.json
@@ -23,8 +23,8 @@ fa65628a2b8fcbc4112e4ae0bfc1eaa115e13029 assets\bbqmod\models\item\ketchup_mutto
 1bc8f49f1b042ccdeb07f637ffb4685334c25ecb assets\bbqmod\blockstates\tomato_crop.json
 142aef0d10562e22eacc0e334f8733c8039bbf49 assets\bbqmod\models\item\cooked_ketchup_mutton.json
 cc9772294aaffc07e973de8f43f2f3dccdae325d assets\bbqmod\models\item\barbecue_rabbit.json
-ad33aceb0eaf5f4a3b6b0fd6030ed65d730874ea assets\bbqmod\models\item\barbecue_chicken.json
 4405b2bf21e500daf622fa63ea3dee5aa1a097a6 assets\bbqmod\models\item\cooked_ketchup_porkchop.json
+ad33aceb0eaf5f4a3b6b0fd6030ed65d730874ea assets\bbqmod\models\item\barbecue_chicken.json
 fcb3df231e791c9ef2c715cf87672e67a8c8a089 assets\bbqmod\models\item\cooked_ketchup_beef.json
 4b89631ace01af21a22ed1ed201005a44e3c622f assets\bbqmod\models\block\tomato_crop_stage5.json
 7d9a4d3459851aff674bb1fdf13f92d099faa67d assets\bbqmod\models\block\tomato_crop_stage2.json
