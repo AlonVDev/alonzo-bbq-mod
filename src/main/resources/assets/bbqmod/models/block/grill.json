@@ -1,7 +1,6 @@
 {
 	"credit": "Made with Blockbench",
 	"ambientocclusion": false,
-	"render_type": "minecraft:cutout",
 	"parent": "block/cube_all",
 	"textures": {
 		"0": "minecraft:block/cauldron_side",
