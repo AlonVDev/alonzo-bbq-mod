@@ -37,6 +37,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.BARBECUE_RABBIT, ModItems.COOKED_BARBECUE_RABBIT, 0.35f);
         offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.KETCHUP_RABBIT, ModItems.COOKED_KETCHUP_RABBIT, 0.35f);
 
+        offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, 600, ModItems.BEEF_SKEWER, ModItems.COOKED_BEEF_SKEWER, 0.35f);
+
         // Smelting
         offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.BARBECUE_BEEF, ModItems.COOKED_BARBECUE_BEEF, 0.35f);
         offerFoodCookingRecipe(exporter, "smelting", RecipeSerializer.SMELTING, 200, ModItems.KETCHUP_BEEF, ModItems.COOKED_KETCHUP_BEEF, 0.35f);

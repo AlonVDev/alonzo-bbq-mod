@@ -38,6 +38,8 @@ public class ModItemGroups {
                             entries.add(ModItems.COOKED_KETCHUP_RABBIT);
                             entries.add(ModItems.BARBECUE_RABBIT);
                             entries.add(ModItems.COOKED_BARBECUE_RABBIT);
+                            entries.add(ModItems.BEEF_SKEWER);
+                            entries.add(ModItems.COOKED_BEEF_SKEWER);
                         }).build());
 
     public static void registerItemGroups() {

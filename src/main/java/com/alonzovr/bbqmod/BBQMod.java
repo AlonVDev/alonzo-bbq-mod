@@ -5,6 +5,7 @@ import com.alonzovr.bbqmod.block.entity.ModBlockEntities;
 import com.alonzovr.bbqmod.item.ModItemGroups;
 import com.alonzovr.bbqmod.item.ModItems;
 import com.alonzovr.bbqmod.util.ModCustomTrades;
+import com.alonzovr.bbqmod.util.ModLootTableModifiers;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -21,5 +22,6 @@ public class BBQMod implements ModInitializer {
 		ModBlockEntities.registerBlockEntities();
 		ModItemGroups.registerItemGroups();
 		ModCustomTrades.registerCustomTrades();
+		ModLootTableModifiers.modifyLootTables();
 	}
 }
