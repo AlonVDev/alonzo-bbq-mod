@@ -44,8 +44,8 @@ public class ModItems {
     public static final Item TOMATO_SEEDS = registerItem("tomato_seeds", new AliasedBlockItem(ModBlocks.TOMATO_CROP, new FabricItemSettings()));
 
     // Skewers
-    public static final Item BEEF_SKEWER = registerItem("beef_skewer", new Item(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
-    public static final Item COOKED_BEEF_SKEWER = registerItem("cooked_beef_skewer", new Item(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_BEEF)));
+    public static final Item BEEF_SKEWER = registerItem("beef_skewer", new SkewerItem(new FabricItemSettings().food(ModFoodComponents.SAUCED_BEEF)));
+    public static final Item COOKED_BEEF_SKEWER = registerItem("cooked_beef_skewer", new SkewerItem(new FabricItemSettings().food(ModFoodComponents.COOKED_SAUCED_BEEF)));
 
 
     private static Item registerItem(String name, Item item) {
