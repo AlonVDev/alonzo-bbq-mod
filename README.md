@@ -50,4 +50,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-Alonzo's BBQ Mod © 2025 by Alonzo is licensed under CC BY-NC-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+[Alonzo's BBQ Mod](https://github.com/AlonzoVR/alonzo-bbq-mod/) © 2025 by [Alonzo](https://github.com/AlonzoVR) is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 
